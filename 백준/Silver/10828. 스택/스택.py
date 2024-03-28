@@ -10,7 +10,7 @@ for i in range(n):
 
     elif command[0]=='pop':
         if stack:
-            print(stack.pop(-1))
+            print(stack.pop(-1)) #.pop 자체가 가장 뒤의 원소를 빼는 것이므로 pop(-1)을 할 필요가 없음. pop()으로도 충분
         else:
             print('-1')
 
