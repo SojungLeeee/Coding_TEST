@@ -17,9 +17,7 @@ class Solution {
         String[] s_arr = s.split("");
         Arrays.sort(s_arr);
         
-        for(int i=0; i<s_arr.length; i++){
-            answer+=s_arr[i];
-        }
+        answer = String.join("",s_arr);
         
         return answer;
     }
