@@ -7,7 +7,7 @@ class Solution {
         for(int i=0; i<keyinput.length; i++){
             if(keyinput[i].equals("left")){
                 if(answer[0]-1>-maxWidth){
-                    answer[0] = answer[0]-1;
+                    answer[0] -= 1;
                 }
                 else{
                     answer[0] = -maxWidth;
@@ -15,7 +15,7 @@ class Solution {
             }
             else if(keyinput[i].equals("right")){
                 if(answer[0]+1<maxWidth){
-                    answer[0] = answer[0]+1;
+                    answer[0] += 1;
                 }
                 else{
                     answer[0] = maxWidth;
@@ -23,7 +23,7 @@ class Solution {
             }
             else if(keyinput[i].equals("up")){
                 if(answer[1]+1<maxHeight){
-                    answer[1] = answer[1]+1;
+                    answer[1] += 1;
                 }
                 else{
                     answer[1] = maxHeight;
@@ -31,7 +31,7 @@ class Solution {
             }
             else if(keyinput[i].equals("down")){
                 if(answer[1]-1>-maxHeight){
-                    answer[1] = answer[1]-1;
+                    answer[1] -= 1;
                 }
                 else{
                     answer[1] = -maxHeight;
