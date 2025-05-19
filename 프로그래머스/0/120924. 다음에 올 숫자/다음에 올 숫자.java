@@ -1,9 +1,11 @@
 class Solution {
     public int solution(int[] common) {
         int answer = 0;
-        if(common[1]-common[0] == common[2]-common[1]){
+        int a = common[1] - common[0];
+        int b = common[2] - common[1];
+        if(a == b){
             System.out.println("등차수열");
-            int diff = common[1]-common[0];
+            int diff = a;
             answer = common[common.length-1] + diff;
         }
         else{
