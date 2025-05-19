@@ -3,9 +3,6 @@ class Solution {
         
         String[] alphabet = A.split("");
         
-        System.out.println(A);
-        System.out.println(B);
-        
         if(A.equals(B)){
             return 0;
         }
