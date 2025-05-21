@@ -2,29 +2,24 @@ import java.util.*;
 
 class Solution {
     public int solution(int[] nums) {
-        //최대로 가질 수 있는 폰켓몬 수는 N/2
         int answer = 0;
         
-        //1. HashMap 에 key,value 로 포켓몬종류, 개수 저장하기
-        Map<Integer, Integer> map = new HashMap<>();
+        Set<Integer> pocketmonSet = new HashSet<>();
         
-        for(Integer num : nums){
-            map.put(num, map.getOrDefault(num,0)+1); //map 에 저장
-        }
-        
-        List<Integer> keys = new ArrayList<>();
-        
-        for(Integer key : map.keySet()){
-            keys.add(key);
+        for(Integer pocketmon : nums){
+            pocketmonSet.add(pocketmon);
         }
         
         int maxNum = nums.length / 2;
-        if(maxNum > keys.size()){
-            answer = keys.size();
+        if(maxNum > pocketmonSet.size()){
+            answer = pocketmonSet.size();
         }
         else{
             answer = maxNum;
         }
+        
+        //이 부분을 Math.min(maxNum, pocketmonSet.size()) 로 할 수 있을듯
+        
         
         return answer;
     }
