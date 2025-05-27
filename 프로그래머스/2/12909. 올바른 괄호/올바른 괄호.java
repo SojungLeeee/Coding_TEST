@@ -3,27 +3,18 @@ import java.util.*;
 class Solution {
     boolean solution(String s) {
         boolean answer = true;
+        Stack<Character> stack = new Stack<>();
 
-        Stack<String> stack = new Stack<>();
-        
-        if(String.valueOf(s.charAt(0)).equals(")")){
-            return false;
-        }
-        else{
-            stack.push(String.valueOf(s.charAt(0)));
-        }
-        
-        for(int i=1; i<s.length(); i++){
-            if(String.valueOf(s.charAt(i)).equals("(")){
-                stack.push(String.valueOf(s.charAt(i)));
-            }
-            else{
-                if(stack.isEmpty()){
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+
+            if (ch == '(') {
+                stack.push(ch);
+            } else if (ch == ')') {
+                if (stack.isEmpty()) {
                     return false;
                 }
-                else{
-                    stack.pop();
-                }
+                stack.pop();
             }
         }
         
@@ -33,7 +24,9 @@ class Solution {
         else{
             answer = false;
         }
-        
+
         return answer;
     }
 }
+
+
