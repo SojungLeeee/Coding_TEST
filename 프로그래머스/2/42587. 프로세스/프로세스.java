@@ -5,7 +5,7 @@ class Solution {
         int answer = 0;
         Queue<int[]> queue = new ArrayDeque<>();
         
-        // [index, priority] 형태로 큐에 삽입
+        // [index, priority] 형태로 큐에 삽입하기
         for (int i = 0; i < priorities.length; i++) {
             queue.add(new int[] {i, priorities[i]});
         }
