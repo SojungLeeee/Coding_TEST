@@ -12,9 +12,9 @@ class Solution {
         
         for(int i=0; i<n; i++){
             //i번째부터 끝까지 논문의 개수
-            int overCitations = n-i;
-            if(citations[i]>=overCitations){
-                answer = overCitations;
+            int h = n-i;
+            if(citations[i]>=h){
+                answer = h;
                 break;
             }
         }
