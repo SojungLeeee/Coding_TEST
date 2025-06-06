@@ -3,7 +3,7 @@ class Solution {
         int answer = 0;
         int result = 0;
         
-        // 출근 희망시각 + 10분까지 /////////////////////////////////
+        // 출근 희망시각 + 10분까지 저장한 배열 ///////////////
         int[] safeSchedules = new int[schedules.length];
         
         for(int i=0; i<schedules.length; i++){
