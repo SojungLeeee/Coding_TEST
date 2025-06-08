@@ -14,7 +14,7 @@ class Solution {
             }
             else{
                 answer[i] = i-map.get(s.charAt(i));
-                map.put(s.charAt(i),i); //인덱스 변경
+                map.put(s.charAt(i),i); //인덱스를 변경하여 저장
             }
         }
         
