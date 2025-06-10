@@ -1,18 +1,19 @@
 class Solution {
     public String solution(String new_id) {
-        String answer = "";
         String temp_answer = "";
         
         //1. new_id 의 모든 대문자를 대응되는 소문자로 치환하기
-        for(int i=0; i<new_id.length(); i++){
-            char c = new_id.charAt(i);
-            int ascii = (int)c;
-            if(ascii>=65 && ascii<=90){
-                ascii = ascii+32;
-                c = (char)ascii;
-            }
-            temp_answer += c;
-        }
+        // for(int i=0; i<new_id.length(); i++){
+        //     char c = new_id.charAt(i);
+        //     int ascii = (int)c;
+        //     if(ascii>=65 && ascii<=90){
+        //         ascii = ascii+32;
+        //         c = (char)ascii;
+        //     }
+        //     temp_answer += c;
+        // }
+        
+        temp_answer = new_id.toLowerCase();
         
         //2. new_id 에서 알파벳 소문자, 숫자, -, _, . 제외 모든 문자 제거
         temp_answer = temp_answer.replaceAll("[^a-z0-9._-]", "");
