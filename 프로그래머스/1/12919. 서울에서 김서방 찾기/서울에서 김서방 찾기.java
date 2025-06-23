@@ -5,9 +5,9 @@ class Solution {
         for(int i=0; i<seoul.length; i++){
             if(seoul[i].equals("Kim")){
                 answer = String.valueOf(i);
+                break;
             }
-        }
-        
+        }        
         
         String sentence = "김서방은 " + answer + "에 있다";
         
